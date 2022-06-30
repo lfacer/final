@@ -121,11 +121,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\lface\\OneDrive\\Desktop\\CSE 210\\cse210-student-articulate-csharp\\Unit06\\Unit06.csproj",
+      "projectUniqueName": "C:\\Users\\lface\\OneDrive\\Desktop\\CSE 210\\final project\\Unit06.csproj",
       "projectName": "Unit06",
-      "projectPath": "c:\\Users\\lface\\OneDrive\\Desktop\\CSE 210\\cse210-student-articulate-csharp\\Unit06\\Unit06.csproj",
+      "projectPath": "C:\\Users\\lface\\OneDrive\\Desktop\\CSE 210\\final project\\Unit06.csproj",
       "packagesPath": "C:\\Users\\lface\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\lface\\OneDrive\\Desktop\\CSE 210\\cse210-student-articulate-csharp\\Unit06\\obj\\",
+      "outputPath": "C:\\Users\\lface\\OneDrive\\Desktop\\CSE 210\\final project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lface\\AppData\\Roaming\\NuGet\\NuGet.Config"
