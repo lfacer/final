@@ -114,7 +114,7 @@ namespace Unit06.Game.Directing
 
             script.ClearAllActions();
 
-            ControlRacketAction action = new ControlRacketAction(KeyboardService);
+            ControlDinoAction action = new ControlDinoAction(KeyboardService);
             script.AddAction(Constants.INPUT, action);
 
             AddUpdateActions(script);    
@@ -231,7 +231,7 @@ namespace Unit06.Game.Directing
 
         private void AddRacket(Cast cast)
         {
-            cast.ClearActors(Constants.RACKET_GROUP);
+            cast.ClearActors(Constants.DINO_GROUP);
         
             int x = Constants.CENTER_X - Constants.RACKET_WIDTH / 2;
             int y = Constants.SCREEN_HEIGHT - Constants.RACKET_HEIGHT;
@@ -241,10 +241,10 @@ namespace Unit06.Game.Directing
             Point velocity = new Point(0, 0);
         
             Body body = new Body(position, size, velocity);
-            Animation animation = new Animation(Constants.RACKET_IMAGES, Constants.RACKET_RATE, 0);
+            Animation animation = new Animation(Constants.DINO_IMAGES, Constants.RACKET_RATE, 0);
             Racket racket = new Racket(body, animation, false);
         
-            cast.AddActor(Constants.RACKET_GROUP, racket);
+            cast.AddActor(Constants.DINO_GROUP, racket);
         }
 
         private void AddScore(Cast cast)
@@ -302,7 +302,7 @@ namespace Unit06.Game.Directing
             script.AddAction(Constants.OUTPUT, new DrawHudAction(VideoService));
             script.AddAction(Constants.OUTPUT, new DrawBallAction(VideoService));
             script.AddAction(Constants.OUTPUT, new DrawBricksAction(VideoService));
-            script.AddAction(Constants.OUTPUT, new DrawRacketAction(VideoService));
+            script.AddAction(Constants.OUTPUT, new DrawDinoAction(VideoService));
             script.AddAction(Constants.OUTPUT, new DrawDialogAction(VideoService));
             script.AddAction(Constants.OUTPUT, new EndDrawingAction(VideoService));
         }
@@ -321,10 +321,10 @@ namespace Unit06.Game.Directing
         private void AddUpdateActions(Script script)
         {
             script.AddAction(Constants.UPDATE, new MoveBallAction());
-            script.AddAction(Constants.UPDATE, new MoveRacketAction());
+            script.AddAction(Constants.UPDATE, new MoveDinoAction());
             script.AddAction(Constants.UPDATE, new CollideBordersAction(PhysicsService, AudioService));
             script.AddAction(Constants.UPDATE, new CollideBrickAction(PhysicsService, AudioService));
-            script.AddAction(Constants.UPDATE, new CollideRacketAction(PhysicsService, AudioService));
+            script.AddAction(Constants.UPDATE, new CollideDinoAction(PhysicsService, AudioService));
             script.AddAction(Constants.UPDATE, new CheckOverAction());     
         }
     }
