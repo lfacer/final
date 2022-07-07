@@ -52,6 +52,8 @@ namespace Unit06
         public static string SPACE = "space";
         public static string ENTER = "enter";
         public static string PAUSE = "p";
+        public static string UP = "up";
+        public static string DOWN = "down";
 
         // SCENES
         public static string NEW_GAME = "new_game";
@@ -103,9 +105,9 @@ namespace Unit06
         public static int BALL_VELOCITY = 6;
 
         // RACKET
-        public static string RACKET_GROUP = "rackets";
+        public static string DINO_GROUP = "dinos";
         
-        public static List<string> RACKET_IMAGES
+        public static List<string> DINO_IMAGES
             = new List<string>() {
                 "Assets/Images/100.png",
                 "Assets/Images/101.png",
