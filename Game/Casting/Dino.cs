@@ -51,7 +51,7 @@ namespace Unit06.Game.Casting
         /// </summary>
         public void Jump()
         {
-            Point velocity = new Point(-Constants.RACKET_VELOCITY, 0);
+            Point velocity = new Point(0, -Constants.DINO_VELOCITY);
             body.SetVelocity(velocity);
         }
 
@@ -60,7 +60,7 @@ namespace Unit06.Game.Casting
         /// </summary>
         public void Duck()
         {
-            Point velocity = new Point(Constants.RACKET_VELOCITY, 0);
+            Point velocity = new Point(0, Constants.DINO_VELOCITY);
             body.SetVelocity(velocity);
         }
 

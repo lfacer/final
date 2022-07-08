@@ -114,10 +114,10 @@ namespace Unit06
                 "Assets/Images/102.png"
             };
 
-        public static int RACKET_WIDTH = 106;
-        public static int RACKET_HEIGHT = 28;
-        public static int RACKET_RATE = 6;
-        public static int RACKET_VELOCITY = 7;
+        public static int DINO_WIDTH = 106;
+        public static int DINO_HEIGHT = 28;
+        public static int DINO_RATE = 6;
+        public static int DINO_VELOCITY = 7;
 
         // BRICK
         public static string BRICK_GROUP = "bricks";

@@ -53,7 +53,7 @@ namespace Unit06.Game.Directing
             AddLives(cast);
             AddBall(cast);
             AddBricks(cast);
-            AddRacket(cast);
+            AddDino(cast);
             AddDialog(cast, Constants.ENTER_TO_START);
 
             script.ClearAllActions();
@@ -78,7 +78,7 @@ namespace Unit06.Game.Directing
         {
             AddBall(cast);
             AddBricks(cast);
-            AddRacket(cast);
+            AddDino(cast);
             AddDialog(cast, Constants.PREP_TO_LAUNCH);
 
             script.ClearAllActions();
@@ -95,7 +95,7 @@ namespace Unit06.Game.Directing
         private void PrepareTryAgain(Cast cast, Script script)
         {
             AddBall(cast);
-            AddRacket(cast);
+            AddDino(cast);
             AddDialog(cast, Constants.PREP_TO_LAUNCH);
 
             script.ClearAllActions();
@@ -125,7 +125,7 @@ namespace Unit06.Game.Directing
         private void PrepareGameOver(Cast cast, Script script)
         {
             AddBall(cast);
-            AddRacket(cast);
+            AddDino(cast);
             AddDialog(cast, Constants.WAS_GOOD_GAME);
 
             script.ClearAllActions();
@@ -145,7 +145,7 @@ namespace Unit06.Game.Directing
             cast.ClearActors(Constants.BALL_GROUP);
         
             int x = Constants.CENTER_X - Constants.BALL_WIDTH / 2;
-            int y = Constants.SCREEN_HEIGHT - Constants.RACKET_HEIGHT - Constants.BALL_HEIGHT;
+            int y = Constants.SCREEN_HEIGHT - Constants.DINO_HEIGHT - Constants.BALL_HEIGHT;
         
             Point position = new Point(x, y);
             Point size = new Point(Constants.BALL_WIDTH, Constants.BALL_HEIGHT);
@@ -229,22 +229,22 @@ namespace Unit06.Game.Directing
             cast.AddActor(Constants.LIVES_GROUP, label);   
         }
 
-        private void AddRacket(Cast cast)
+        private void AddDino(Cast cast)
         {
             cast.ClearActors(Constants.DINO_GROUP);
         
-            int x = Constants.CENTER_X - Constants.RACKET_WIDTH / 2;
-            int y = Constants.SCREEN_HEIGHT - Constants.RACKET_HEIGHT;
+            int x = Constants.CENTER_X - Constants.DINO_WIDTH / 2;
+            int y = Constants.SCREEN_HEIGHT - Constants.DINO_HEIGHT;
         
             Point position = new Point(x, y);
-            Point size = new Point(Constants.RACKET_WIDTH, Constants.RACKET_HEIGHT);
+            Point size = new Point(Constants.DINO_WIDTH, Constants.DINO_HEIGHT);
             Point velocity = new Point(0, 0);
         
             Body body = new Body(position, size, velocity);
-            Animation animation = new Animation(Constants.DINO_IMAGES, Constants.RACKET_RATE, 0);
-            Racket racket = new Racket(body, animation, false);
+            Animation animation = new Animation(Constants.DINO_IMAGES, Constants.DINO_RATE, 0);
+            Dino dino = new Dino(body, animation, false);
         
-            cast.AddActor(Constants.DINO_GROUP, racket);
+            cast.AddActor(Constants.DINO_GROUP, dino);
         }
 
         private void AddScore(Cast cast)

@@ -21,9 +21,9 @@ namespace Unit06.Game.Scripting
             {
                 position = new Point(0, position.GetY());
             }
-            else if (x > Constants.SCREEN_WIDTH - Constants.RACKET_WIDTH)
+            else if (x > Constants.SCREEN_WIDTH - Constants.DINO_WIDTH)
             {
-                position = new Point(Constants.SCREEN_WIDTH - Constants.RACKET_WIDTH, 
+                position = new Point(Constants.SCREEN_WIDTH - Constants.DINO_WIDTH, 
                     position.GetY());
             }
 
