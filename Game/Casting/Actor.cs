@@ -1,3 +1,6 @@
+using System;
+using System.Numerics;
+
 namespace Unit06.Game.Casting
 {
     /// <summary>
@@ -5,6 +8,10 @@ namespace Unit06.Game.Casting
     /// </summary>
     public class Actor
     {
+        private bool _enabled = true;
+        private Vector2 _position = Vector2.Zero;
+        private Vector2 _size = Vector2.Zero;
+        private Vector2 _velocity = Vector2.Zero;
         private bool debug;
         
         /// <summary>
@@ -22,6 +29,23 @@ namespace Unit06.Game.Casting
         public bool IsDebug()
         {
             return debug;
+        }
+
+        public virtual void Move()
+        {
+            if (_enabled)
+            {
+                _position = _position + _velocity;
+            }
+        }
+
+        public virtual void Move(float gravity)
+        {
+            if (_enabled)
+            {
+                Vector2 force = new Vector2(_velocity.X, _velocity.Y + gravity);
+                _position = _position + force;
+            }
         }
     }
 }

@@ -20,12 +20,16 @@ namespace Unit06.Game.Scripting
             if (x < 0)
             {
                 position = new Point(0, position.GetY());
+                dino.Move(5);
             }
             else if (x > Constants.SCREEN_HEIGHT - Constants.DINO_HEIGHT)
             {
                 position = new Point(Constants.SCREEN_HEIGHT - Constants.DINO_HEIGHT, 
                     position.GetY());
             }
+
+            
+            
 
             body.SetPosition(position);       
         }

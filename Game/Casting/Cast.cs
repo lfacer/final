@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-
+using System.Text.RegularExpressions;
 
 namespace Unit06.Game.Casting
 {
@@ -10,6 +10,8 @@ namespace Unit06.Game.Casting
     {
         private Dictionary<string, List<Actor>> actors = new Dictionary<string, List<Actor>>();
 
+        private Dictionary<string, List<Actor>> _current 
+            = new Dictionary<string, List<Actor>>();
         /// <summary>
         /// Constructs a new instance of Cast.
         /// </summary>
@@ -115,6 +117,22 @@ namespace Unit06.Game.Casting
             if (actors.ContainsKey(group))
             {
                 actors[group].Remove(actor);
+            }
+        }
+
+        public void Add(string group, Actor actor)
+        {
+            Validator.CheckNotBlank(group);
+            Validator.CheckNotNull(actor);
+            
+            if (!_current.ContainsKey(group))
+            {
+                _current[group] = new List<Actor>();
+            }
+
+            if (!_current[group].Contains(actor))
+            {
+                _current[group].Add(actor);
             }
         }
 

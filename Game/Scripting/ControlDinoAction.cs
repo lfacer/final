@@ -19,6 +19,7 @@ namespace Unit06.Game.Scripting
             if (keyboardService.IsKeyDown(Constants.UP))
             {
                 dino.Jump();
+                dino.Move(5);
             }
             else if (keyboardService.IsKeyDown(Constants.DOWN))
             {
