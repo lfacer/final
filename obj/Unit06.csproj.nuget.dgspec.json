@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lface\\OneDrive\\Desktop\\CSE 210\\final project\\Unit06.csproj": {}
+    "/Users/lilysorensen/Documents/CSE 210/final/Unit06.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lface\\OneDrive\\Desktop\\CSE 210\\final project\\Unit06.csproj": {
+    "/Users/lilysorensen/Documents/CSE 210/final/Unit06.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lface\\OneDrive\\Desktop\\CSE 210\\final project\\Unit06.csproj",
+        "projectUniqueName": "/Users/lilysorensen/Documents/CSE 210/final/Unit06.csproj",
         "projectName": "Unit06",
-        "projectPath": "C:\\Users\\lface\\OneDrive\\Desktop\\CSE 210\\final project\\Unit06.csproj",
-        "packagesPath": "C:\\Users\\lface\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lface\\OneDrive\\Desktop\\CSE 210\\final project\\obj\\",
+        "projectPath": "/Users/lilysorensen/Documents/CSE 210/final/Unit06.csproj",
+        "packagesPath": "/Users/lilysorensen/.nuget/packages/",
+        "outputPath": "/Users/lilysorensen/Documents/CSE 210/final/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lface\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/lilysorensen/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }

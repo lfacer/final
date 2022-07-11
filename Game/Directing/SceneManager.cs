@@ -188,8 +188,23 @@ namespace Unit06.Game.Directing
                     
                     Brick brick = new Brick(body, animation, points, false);
                     cast.AddActor(Constants.BRICK_GROUP, brick);
+
                 }
             }
+
+            Point position1 = new Point(0, 0);
+            Point position2 = new Point(800, 0);
+            Point sizeb = new Point(800, 500);
+            Point velocityb = new Point(5, 0);
+            List<string> imagesb = Constants.BACKGROUND_IMAGES;
+            Body body1 = new Body(position1, sizeb, velocityb);
+            Body body2 = new Body(position2, sizeb, velocityb);
+            Animation animationb = new Animation(imagesb, Constants.BACKGROUND_RATE, 1);
+
+            Brick back1 = new Brick(body1, animationb, 0, false);
+            Brick back2 = new Brick(body2, animationb, 0, false);
+            cast.AddActor(Constants.BACKGROUND_GROUP, back1);
+            cast.AddActor(Constants.BACKGROUND_GROUP, back2);
         }
 
         private void AddDialog(Cast cast, string message)

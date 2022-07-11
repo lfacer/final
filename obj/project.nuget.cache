@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4C2hCfdOjxoPvBJprNaWDr/AB37OaiAccvX+0lY1znLhM0bUY//Tt6Zn/yjjU6DcLAoFa9etUSv1foDKxbdApg==",
+  "dgSpecHash": "g3ywan+cPBtJdUDXyVpv/ke4JtB4B77IHFtCIZyja/+2V5p3wZhcG/Jw9K+2sAYpb1Drb6Kgf5N7Ky9Oxvw0IQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lface\\OneDrive\\Desktop\\CSE 210\\final project\\Unit06.csproj",
+  "projectFilePath": "/Users/lilysorensen/Documents/CSE 210/final/Unit06.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\lface\\.nuget\\packages\\raylib-cs\\3.7.0.1\\raylib-cs.3.7.0.1.nupkg.sha512",
-    "C:\\Users\\lface\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+    "/Users/lilysorensen/.nuget/packages/raylib-cs/3.7.0.1/raylib-cs.3.7.0.1.nupkg.sha512",
+    "/Users/lilysorensen/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }
