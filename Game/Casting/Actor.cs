@@ -47,5 +47,111 @@ namespace Unit06.Game.Casting
                 _position = _position + force;
             }
         }
+
+        public virtual void ClampTo(Actor region)
+        {
+            Validator.CheckNotNull(region);
+            
+            if (_enabled)
+            {
+                float x = GetLeft();
+                float y = GetTop();
+
+                float maxX = region.GetRight() - GetWidth();
+                float maxY = region.GetBottom() - GetHeight();
+                float minX = region.GetLeft();
+                float minY = region.GetTop();
+
+                x = Math.Clamp(x, minX, maxX);
+                y = Math.Clamp(y, minY, maxY);
+
+                Vector2 newPosition = new Vector2(x, y);
+                MoveTo(newPosition);
+            }
+        }
+
+        public virtual void Enable()
+        {
+            _enabled = true;
+        }
+
+        public virtual void Disable()
+        {
+            _enabled = false;
+        }
+
+        public virtual float GetBottom()
+        {
+            return _position.Y + _size.Y;
+        }
+
+        public virtual Vector2 GetCenter()
+        {
+            float x = _position.X + (_size.X / 2);
+            float y = _position.Y + (_size.Y / 2);
+            return new Vector2(x, y);
+        }
+
+        public virtual float GetCenterX()
+        {
+            return _position.X + (_size.X / 2);
+        }
+
+        public virtual float GetCenterY()
+        {
+            return _position.Y + (_size.Y / 2);
+        }
+
+        public virtual float GetHeight()
+        {
+            return _size.Y;
+        }
+
+        public virtual float GetLeft()
+        {
+            return _position.X;
+        }
+
+        public virtual Vector2 GetPosition()
+        {
+            return _position;
+        }
+
+        public virtual Vector2 GetOriginalSize()
+        {
+            return _size;
+        }
+
+        public virtual float GetRight()
+        {
+            return _position.X + _size.X;
+        }
+
+
+        public virtual float GetTop()
+        {
+            return _position.Y;
+        }
+
+        public virtual Vector2 GetVelocity()
+        {
+            return _velocity;
+        }
+
+        public virtual float GetWidth()
+        {
+            return _size.X;
+        }
+
+
+        public virtual void MoveTo(Vector2 position)
+        {
+            _position = position;
+        }
+
+        public virtual void MoveTo(float x, float y)
+        {
+            _position = new Vector2(x, y);
+        }
     }
 }
