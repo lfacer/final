@@ -178,11 +178,20 @@ namespace Unit06
                 } }
         };
 
+        public static string BACKGROUND_GROUP = "backgrounds";
+
+        public static List<string> BACKGROUND_IMAGES = new List<string>() {
+                    "Assets/Images/background.png"
+                };
+
         public static int BRICK_WIDTH = 80;
         public static int BRICK_HEIGHT = 28;
         public static double BRICK_DELAY = 0.5;
         public static int BRICK_RATE = 4;
         public static int BRICK_POINTS = 50;
+
+        // background rate
+        public static int BACKGROUND_RATE = 4;
 
         // DIALOG
         public static string DIALOG_GROUP = "dialogs";

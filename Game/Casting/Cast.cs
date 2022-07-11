@@ -10,8 +10,7 @@ namespace Unit06.Game.Casting
     {
         private Dictionary<string, List<Actor>> actors = new Dictionary<string, List<Actor>>();
 
-        private Dictionary<string, List<Actor>> _current 
-            = new Dictionary<string, List<Actor>>();
+        private Dictionary<string, List<Actor>> _current = new Dictionary<string, List<Actor>>();
         /// <summary>
         /// Constructs a new instance of Cast.
         /// </summary>
