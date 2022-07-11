@@ -109,15 +109,23 @@ namespace Unit06
         
         public static List<string> DINO_IMAGES
             = new List<string>() {
-                "Assets/Images/100.png",
-                "Assets/Images/101.png",
-                "Assets/Images/102.png"
+                "Assets/Images/Run (1).png",
+                "Assets/Images/Run (2).png",
+                "Assets/Images/Run (3).png",
+                "Assets/Images/Run (4).png",
+                "Assets/Images/Run (5).png",
+                "Assets/Images/Run (6).png",
+                "Assets/Images/Run (7).png",
+                "Assets/Images/Run (8).png"
             };
+            
 
-        public static int DINO_WIDTH = 106;
-        public static int DINO_HEIGHT = 28;
+        public static int DINO_WIDTH = 10;
+        // 106
+        public static int DINO_HEIGHT = 10;
+        // 28
         public static int DINO_RATE = 6;
-        public static int DINO_VELOCITY = 7;
+        public static int DINO_VELOCITY = 5;
 
         // BRICK
         public static string BRICK_GROUP = "bricks";
