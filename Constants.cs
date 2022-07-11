@@ -118,7 +118,6 @@ namespace Unit06
                 "Assets/Images/Run (7).png",
                 "Assets/Images/Run (8).png"
             };
-
             
 
         public static int DINO_WIDTH = 10;
@@ -126,7 +125,7 @@ namespace Unit06
         public static int DINO_HEIGHT = 10;
         // 28
         public static int DINO_RATE = 6;
-        public static int DINO_VELOCITY = 7;
+        public static int DINO_VELOCITY = 5;
 
         // BRICK
         public static string BRICK_GROUP = "bricks";

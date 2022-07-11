@@ -25,10 +25,8 @@ namespace Unit06.Game.Scripting
             else if (x > Constants.SCREEN_HEIGHT - Constants.DINO_HEIGHT)
             {
                 position = new Point(Constants.SCREEN_HEIGHT - Constants.DINO_HEIGHT, 
-                    position.GetY());
+                position.GetY());
             }
-
-            
             
 
             body.SetPosition(position);       
