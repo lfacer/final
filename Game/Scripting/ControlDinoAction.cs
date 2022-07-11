@@ -28,6 +28,7 @@ namespace Unit06.Game.Scripting
             else
             {
                 dino.StopMoving();
+                
                 dino.Move(5);
             }
 
