@@ -48,135 +48,110 @@ namespace Unit06.Game.Casting
             }
         }
 
-        /// <summary>
-        /// Gets the actor's color.
-        /// </summary>
-        /// <returns>The color.</returns>
-        public Color GetColor()
+        public virtual void ClampTo(Actor region)
         {
-            return color;
-        }
-
-        /// <summary>
-        /// Gets the actor's font size.
-        /// </summary>
-        /// <returns>The font size.</returns>
-        public int GetFontSize()
-        {
-            return fontSize;
-        }
-
-        /// <summary>
-        /// Gets the actor's position.
-        /// </summary>
-        /// <returns>The position.</returns>
-        public Point GetPosition()
-        {
-            return position;
-        }
-
-        /// <summary>
-        /// Gets the actor's text.
-        /// </summary>
-        /// <returns>The text.</returns>
-        public virtual string GetText()
-        {
-            return text;
-        }
-
-        /// <summary>
-        /// Gets the actor's current velocity.
-        /// </summary>
-        /// <returns>The velocity.</returns>
-        public Point GetVelocity()
-        {
-            return velocity;
-        }
-
-        /// <summary>
-        /// Moves the actor to its next position according to its velocity. Will wrap the position 
-        /// from one side of the screen to the other when it reaches the maximum x and y 
-        /// values.
-        /// </summary>
-        /// <param name="maxX">The maximum x value.</param>
-        /// <param name="maxY">The maximum y value.</param>
-        public void MoveNext(int maxX, int maxY)
-        {
-            int x = ((position.GetX() + velocity.GetX()) + maxX) % maxX;
-            int y = ((position.GetY() + velocity.GetY()) + maxY) % maxY;
-            position = new Point(x, y);
-        }
-
-        /// <summary>
-        /// Sets the actor's color to the given value.
-        /// </summary>
-        /// <param name="color">The given color.</param>
-        /// <exception cref="ArgumentException">When color is null.</exception>
-        public void SetColor(Color color)
-        {
-            if (color == null)
+            Validator.CheckNotNull(region);
+            
+            if (_enabled)
             {
-                throw new ArgumentException("color can't be null");
+                float x = GetLeft();
+                float y = GetTop();
+
+                float maxX = region.GetRight() - GetWidth();
+                float maxY = region.GetBottom() - GetHeight();
+                float minX = region.GetLeft();
+                float minY = region.GetTop();
+
+                x = Math.Clamp(x, minX, maxX);
+                y = Math.Clamp(y, minY, maxY);
+
+                Vector2 newPosition = new Vector2(x, y);
+                MoveTo(newPosition);
             }
-            this.color = color;
         }
 
-        /// <summary>
-        /// Sets the actor's font size to the given value.
-        /// </summary>
-        /// <param name="fontSize">The given font size.</param>
-        /// <exception cref="ArgumentException">
-        /// When font size is less than or equal to zero.
-        /// </exception>
-        public void SetFontSize(int fontSize)
+        public virtual void Enable()
         {
-            if (fontSize <= 0)
-            {
-                throw new ArgumentException("fontSize must be greater than zero");
-            }
-            this.fontSize = fontSize;
+            _enabled = true;
         }
 
-        /// <summary>
-        /// Sets the actor's position to the given value.
-        /// </summary>
-        /// <param name="position">The given position.</param>
-        /// <exception cref="ArgumentException">When position is null.</exception>
-        public void SetPosition(Point position)
+        public virtual void Disable()
         {
-            if (position == null)
-            {
-                throw new ArgumentException("position can't be null");
-            }
-            this.position = position;
+            _enabled = false;
         }
 
-        /// <summary>
-        /// Sets the actor's text to the given value.
-        /// </summary>
-        /// <param name="text">The given text.</param>
-        /// <exception cref="ArgumentException">When text is null.</exception>
-        public void SetText(string text)
+        public virtual float GetBottom()
         {
-            if (text == null)
-            {
-                throw new ArgumentException("text can't be null");
-            }
-            this.text = text;
+            return _position.Y + _size.Y;
         }
 
-        /// <summary>
-        /// Sets the actor's velocity to the given value.
-        /// </summary>
-        /// <param name="velocity">The given velocity.</param>
-        /// <exception cref="ArgumentException">When velocity is null.</exception>
-        public void SetVelocity(Point velocity)
+        public virtual Vector2 GetCenter()
         {
-            if (velocity == null)
-            {
-                throw new ArgumentException("velocity can't be null");
-            }
-            this.velocity = velocity;
+            float x = _position.X + (_size.X / 2);
+            float y = _position.Y + (_size.Y / 2);
+            return new Vector2(x, y);
+        }
+
+        public virtual float GetCenterX()
+        {
+            return _position.X + (_size.X / 2);
+        }
+
+        public virtual float GetCenterY()
+        {
+            return _position.Y + (_size.Y / 2);
+        }
+
+        public virtual float GetHeight()
+        {
+            return _size.Y;
+        }
+
+        public virtual float GetLeft()
+        {
+            return _position.X;
+        }
+
+        public virtual Vector2 GetPosition()
+        {
+            return _position;
+        }
+
+        public virtual Vector2 GetOriginalSize()
+        {
+            return _size;
+        }
+
+        public virtual float GetRight()
+        {
+            return _position.X + _size.X;
+        }
+
+
+        public virtual float GetTop()
+        {
+            return _position.Y;
+        }
+
+        public virtual Vector2 GetVelocity()
+        {
+            return _velocity;
+        }
+
+        public virtual float GetWidth()
+        {
+            return _size.X;
+        }
+
+
+        public virtual void MoveTo(Vector2 position)
+        {
+            _position = position;
+        }
+
+        public virtual void MoveTo(float x, float y)
+        {
+            _position = new Vector2(x, y);
         }
     }
 }
