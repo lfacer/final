@@ -251,7 +251,7 @@ namespace Unit06.Game.Directing
             int x = Constants.CENTER_X - Constants.DINO_WIDTH / 2;
             int y = Constants.SCREEN_HEIGHT - Constants.DINO_HEIGHT;
         
-            Point position = new Point(x, y);
+            Point position = new Point(0, 100);
             Point size = new Point(Constants.DINO_WIDTH, Constants.DINO_HEIGHT);
             Point velocity = new Point(0, 0);
         

@@ -194,5 +194,10 @@ namespace Unit06.Game.Services
                 System.Convert.ToByte(255));
         }
 
+        public float GetDeltaTime()
+        {
+            return Raylib.GetFrameTime();
+        }
+
     }
 }
