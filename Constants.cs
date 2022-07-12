@@ -107,7 +107,7 @@ namespace Unit06
         // RACKET
         public static string DINO_GROUP = "dinos";
         
-        public static List<string> DINO_IMAGES
+        public static List<string> DINO_IMAGES_RUN
             = new List<string>() {
                 "Assets/Images/Run (1).png",
                 "Assets/Images/Run (2).png",
@@ -117,6 +117,22 @@ namespace Unit06
                 "Assets/Images/Run (6).png",
                 "Assets/Images/Run (7).png",
                 "Assets/Images/Run (8).png"
+            };
+
+        public static List<string> DINO_IMAGES_JUMP
+            = new List<string>() {
+                "Assets/Images/Jump (1).png",
+                "Assets/Images/Jump (2).png",
+                "Assets/Images/Jump (3).png",
+                "Assets/Images/Jump (4).png",
+                "Assets/Images/Jump (5).png",
+                "Assets/Images/Jump (6).png",
+                "Assets/Images/Jump (7).png",
+                "Assets/Images/Jump (8).png",
+                "Assets/Images/Jump (9).png",
+                "Assets/Images/Jump (10).png",
+                "Assets/Images/Jump (11).png",
+                "Assets/Images/Jump (12).png"
             };
             
 

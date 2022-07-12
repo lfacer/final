@@ -251,13 +251,20 @@ namespace Unit06.Game.Directing
             int x = Constants.CENTER_X - Constants.DINO_WIDTH / 2;
             int y = Constants.SCREEN_HEIGHT - Constants.DINO_HEIGHT;
         
-            Point position = new Point(0, 100);
+            Point position = new Point(0, 200);
             Point size = new Point(Constants.DINO_WIDTH, Constants.DINO_HEIGHT);
             Point velocity = new Point(0, 0);
         
             Body body = new Body(position, size, velocity);
-            Animation animation = new Animation(Constants.DINO_IMAGES, Constants.DINO_RATE, 0);
-            Dino dino = new Dino(body, animation, false);
+            Animation run = new Animation(Constants.DINO_IMAGES_RUN, Constants.DINO_RATE, 0);
+            Dino dino = new Dino(body, run, false);
+
+            // while (Dino.Jump() = true)
+            // {
+            //     Animation jump = new Animation(Constants.DINO_IMAGES_JUMP, Constants.DINO_RATE, 0);
+            //     Dino dinoj = new Dino(body, jump, false);
+            // }
+        
         
             cast.AddActor(Constants.DINO_GROUP, dino);
         }
