@@ -50,11 +50,10 @@ namespace Unit06.Game.Directing
             AddStats(cast);
             AddLevel(cast);
             AddScore(cast);
- 
 
             // AddLives(cast);
             // AddBall(cast);
-            // AddBricks(cast);
+            AddBricks(cast);
             AddDino(cast);
             AddDialog(cast, Constants.ENTER_TO_START);
             AddBackground(cast);
@@ -81,7 +80,7 @@ namespace Unit06.Game.Directing
         {
 
             // AddBall(cast);
-            // AddBricks(cast);
+            AddBricks(cast);
             AddDino(cast);
             AddDialog(cast, Constants.PREP_TO_LAUNCH);
 
