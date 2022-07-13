@@ -10,6 +10,8 @@ namespace Unit06.Game.Casting
         private int blue;
         private int alpha;
 
+        public static Color White() { return new Color(255, 255, 255); }
+
         /// <summary>
         /// Constructs a new instance of Color.
         /// </summary>

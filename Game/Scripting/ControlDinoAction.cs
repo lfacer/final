@@ -32,7 +32,7 @@ namespace Unit06.Game.Scripting
             }
 
             dino.Move(5);
-
+            // dino.ClampTo(screen);
             
         }
     }

@@ -13,6 +13,8 @@ namespace Unit06.Game.Services
         private int height;
         private string title;
         private int width;
+
+        private Raylib_cs.Color _background = Raylib_cs.Color.BLACK;
         
         private Dictionary<string, Raylib_cs.Font> fonts
             = new Dictionary<string, Raylib_cs.Font>();

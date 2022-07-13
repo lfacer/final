@@ -2,7 +2,7 @@
 // using System.Numerics;
 
 
-// namespace Byui.Games.Casting
+// namespace Unit06.Game.Casting
 // {
 //     /// <summary>
 //     /// A visible Actor.
@@ -15,6 +15,7 @@
 //         private Actor _focus;
 //         private Actor _screen;
 //         private Actor _world;
+
         
 //         public Camera(Actor focus, Actor screen, Actor world) 
 //         {

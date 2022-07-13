@@ -13,6 +13,8 @@ namespace Unit06.Game.Casting
         private Vector2 _size = Vector2.Zero;
         private Vector2 _velocity = Vector2.Zero;
         private bool debug;
+        private float _scale = 1f;
+        private Color _tint = Color.White();
         
         /// <summary>
         /// Constructs a new instance of Actor.
@@ -153,5 +155,32 @@ namespace Unit06.Game.Casting
         {
             _position = new Vector2(x, y);
         }
+
+        public virtual Color GetTint()
+        {
+            return _tint;
+        }
+
+        public virtual void Tint(Color color)
+        {
+            Validator.CheckNotNull(color);
+            _tint = color;
+        }
+
+        public virtual void Scale(float percent)
+        {
+            _scale += percent;
+        }
+
+        public virtual float GetScale()
+        {
+            return _scale;
+        }
+
+        public virtual Vector2 GetSize()
+        {
+            return _size * _scale;
+        }
+
     }
 }
