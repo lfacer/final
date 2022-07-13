@@ -98,11 +98,11 @@ namespace Unit06
         public static string SCORE_FORMAT = "SCORE: {0}";
 
         // BALL
-        public static string BALL_GROUP = "balls";
-        public static string BALL_IMAGE = "Assets/Images/000.png";
-        public static int BALL_WIDTH = 28;
-        public static int BALL_HEIGHT = 28;
-        public static int BALL_VELOCITY = 4;
+        // public static string BALL_GROUP = "balls";
+        // public static string BALL_IMAGE = "Assets/Images/000.png";
+        // public static int BALL_WIDTH = 28;
+        // public static int BALL_HEIGHT = 28;
+        // public static int BALL_VELOCITY = 4;
 
         // RACKET
         public static string DINO_GROUP = "dinos";
