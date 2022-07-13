@@ -206,8 +206,12 @@ namespace Unit06
         public static int BRICK_RATE = 4;
         public static int BRICK_POINTS = 50;
 
-        // background rate
+        // background sizes and info
         public static int BACKGROUND_RATE = 4;
+        public static int BACKGROUND_WIDTH = 800;
+        public static int BACKGROUND_HEIGHT = 500;
+        public static double BACKGROUND_DELAY = 0.5;
+
 
         // DIALOG
         public static string DIALOG_GROUP = "dialogs";
