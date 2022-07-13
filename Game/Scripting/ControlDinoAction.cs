@@ -20,6 +20,10 @@ namespace Unit06.Game.Scripting
             {
                 dino.Jump();
                 
+                
+                dino.Duck();
+            
+                
             }
             else if (keyboardService.IsKeyDown(Constants.DOWN))
             {
@@ -27,11 +31,11 @@ namespace Unit06.Game.Scripting
             }
             else
             {
-                // dino.StopMoving();
                 dino.Move(5);
+                dino.StopMoving();
             }
 
-            dino.Move(5);
+            // dino.Move(5);
             // dino.ClampTo(screen);
             
         }

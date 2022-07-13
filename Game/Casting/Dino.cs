@@ -60,7 +60,7 @@ namespace Unit06.Game.Casting
         /// </summary>
         public void Duck()
         {
-            Point velocity = new Point(0, Constants.DINO_VELOCITY);
+            Point velocity = new Point(0, 30);
             body.SetVelocity(velocity);
         }
 
