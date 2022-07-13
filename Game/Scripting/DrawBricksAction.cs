@@ -16,7 +16,7 @@ namespace Unit06.Game.Scripting
 
         public void Execute(Cast cast, Script script, ActionCallback callback)
         {
-            List<Actor> bricks = cast.GetActors(Constants.BRICK_GROUP);
+            List<Actor> bricks = cast.GetActors(Constants.BACKGROUND_GROUP);
             foreach (Actor actor in bricks)
             {
                 Brick brick = (Brick)actor;

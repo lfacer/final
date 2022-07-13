@@ -50,11 +50,13 @@ namespace Unit06.Game.Directing
             AddStats(cast);
             AddLevel(cast);
             AddScore(cast);
+
             // AddLives(cast);
             // AddBall(cast);
             AddBricks(cast);
             AddDino(cast);
             AddDialog(cast, Constants.ENTER_TO_START);
+            AddBackground(cast);
 
             script.ClearAllActions();
             AddInitActions(script);
@@ -76,6 +78,7 @@ namespace Unit06.Game.Directing
 
         private void PrepareNextLevel(Cast cast, Script script)
         {
+
             // AddBall(cast);
             AddBricks(cast);
             AddDino(cast);
@@ -158,7 +161,7 @@ namespace Unit06.Game.Directing
         //     cast.AddActor(Constants.BALL_GROUP, ball);
         // }
 
-        private void AddBricks(Cast cast)
+        private void AddBackground(Cast cast)
         {
             cast.ClearActors(Constants.BRICK_GROUP);
 

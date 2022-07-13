@@ -15,8 +15,8 @@ namespace Unit06
         public static int FRAME_RATE = 60;
 
         // SCREEN
-        public static int SCREEN_WIDTH = 1040;
-        public static int SCREEN_HEIGHT = 680;
+        public static int SCREEN_WIDTH = 800;
+        public static int SCREEN_HEIGHT = 500;
         public static int CENTER_X = SCREEN_WIDTH / 2;
         public static int CENTER_Y = SCREEN_HEIGHT / 2;
 
@@ -206,8 +206,12 @@ namespace Unit06
         public static int BRICK_RATE = 4;
         public static int BRICK_POINTS = 50;
 
-        // background rate
+        // background sizes and info
         public static int BACKGROUND_RATE = 4;
+        public static int BACKGROUND_WIDTH = 1200;
+        public static int BACKGROUND_HEIGHT = 750;
+        public static double BACKGROUND_DELAY = 0.5;
+
 
         // DIALOG
         public static string DIALOG_GROUP = "dialogs";
