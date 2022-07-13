@@ -199,5 +199,37 @@ namespace Unit06.Game.Services
             return Raylib.GetFrameTime();
         }
 
+        // public void Draw(Actor actor)
+        // {
+        //     Raylib_cs.Color color = GetRaylibColor(actor.GetTint());
+        //     Vector2 position = actor.GetCenter();
+        //     Vector2 size = actor.GetSize();
+        //     float rotation = actor.GetRotation();
+            
+        //     Rectangle destination = new Rectangle(position.X, position.Y, size.X, size.Y);
+        //     Vector2 origin = new Vector2(size.X / 2, size.Y / 2);
+            
+        //     Raylib.DrawRectanglePro(destination, origin, rotation, color);
+        // }
+
+        // public void Draw(Actor actor, Camera camera)
+        // {
+        //     Actor focus = camera.GetFocus();
+        //     Actor screen = camera.GetScreen();
+
+        //     if (actor == focus || actor.Overlaps(screen))
+        //     {
+        //         Raylib_cs.Color color = GetRaylibColor(actor.GetTint());
+        //         Vector2 position = actor.GetCenter() - camera.GetPosition();
+        //         Vector2 size = actor.GetSize();
+        //         float rotation = actor.GetRotation();
+
+        //         Rectangle destination = new Rectangle(position.X, position.Y, size.X, size.Y);
+        //         Vector2 origin = new Vector2(size.X / 2, size.Y / 2);
+
+        //         Raylib.DrawRectanglePro(destination, origin, rotation, color);
+        //     }
+        // }
+
     }
 }
