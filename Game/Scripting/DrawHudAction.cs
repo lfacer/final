@@ -17,7 +17,7 @@ namespace Unit06.Game.Scripting
         {
             Stats stats = (Stats)cast.GetFirstActor(Constants.STATS_GROUP);
             DrawLabel(cast, Constants.LEVEL_GROUP, Constants.LEVEL_FORMAT, stats.GetLevel());
-            DrawLabel(cast, Constants.LIVES_GROUP, Constants.LIVES_FORMAT, stats.GetLives());
+            // DrawLabel(cast, Constants.LIVES_GROUP, Constants.LIVES_FORMAT, stats.GetLives());
             DrawLabel(cast, Constants.SCORE_GROUP, Constants.SCORE_FORMAT, stats.GetScore());
         }
 

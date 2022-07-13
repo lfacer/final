@@ -50,8 +50,10 @@ namespace Unit06.Game.Directing
             AddStats(cast);
             AddLevel(cast);
             AddScore(cast);
-            AddLives(cast);
-            AddBall(cast);
+ 
+
+            // AddLives(cast);
+            // AddBall(cast);
             // AddBricks(cast);
             AddDino(cast);
             AddDialog(cast, Constants.ENTER_TO_START);
@@ -69,15 +71,16 @@ namespace Unit06.Game.Directing
             AddReleaseActions(script);
         }
 
-        private void ActivateBall(Cast cast)
-        {
-            Ball ball = (Ball)cast.GetFirstActor(Constants.BALL_GROUP);
-            ball.Release();
-        }
+        // private void ActivateBall(Cast cast)
+        // {
+        //     Ball ball = (Ball)cast.GetFirstActor(Constants.BALL_GROUP);
+        //     ball.Release();
+        // }
 
         private void PrepareNextLevel(Cast cast, Script script)
         {
-            AddBall(cast);
+
+            // AddBall(cast);
             // AddBricks(cast);
             AddDino(cast);
             AddDialog(cast, Constants.PREP_TO_LAUNCH);
@@ -95,7 +98,7 @@ namespace Unit06.Game.Directing
 
         private void PrepareTryAgain(Cast cast, Script script)
         {
-            AddBall(cast);
+            // AddBall(cast);
             AddDino(cast);
             AddDialog(cast, Constants.PREP_TO_LAUNCH);
 
@@ -110,7 +113,7 @@ namespace Unit06.Game.Directing
 
         private void PrepareInPlay(Cast cast, Script script)
         {
-            ActivateBall(cast);
+            // ActivateBall(cast);
             cast.ClearActors(Constants.DIALOG_GROUP);
 
             script.ClearAllActions();
@@ -125,7 +128,7 @@ namespace Unit06.Game.Directing
 
         private void PrepareGameOver(Cast cast, Script script)
         {
-            AddBall(cast);
+            // AddBall(cast);
             AddDino(cast);
             AddDialog(cast, Constants.WAS_GOOD_GAME);
 
@@ -141,23 +144,23 @@ namespace Unit06.Game.Directing
         // casting methods
         // -----------------------------------------------------------------------------------------
 
-        private void AddBall(Cast cast)
-        {
-            cast.ClearActors(Constants.BALL_GROUP);
+        // private void AddBall(Cast cast)
+        // {
+        //     cast.ClearActors(Constants.BALL_GROUP);
         
-            int x = Constants.CENTER_X - Constants.BALL_WIDTH / 2;
-            int y = Constants.SCREEN_HEIGHT - Constants.DINO_HEIGHT - Constants.BALL_HEIGHT;
+        //     int x = Constants.CENTER_X - Constants.BALL_WIDTH / 2;
+        //     int y = Constants.SCREEN_HEIGHT - Constants.DINO_HEIGHT - Constants.BALL_HEIGHT;
         
-            Point position = new Point(x, y);
-            Point size = new Point(Constants.BALL_WIDTH, Constants.BALL_HEIGHT);
-            Point velocity = new Point(0, 0);
+        //     Point position = new Point(x, y);
+        //     Point size = new Point(Constants.BALL_WIDTH, Constants.BALL_HEIGHT);
+        //     Point velocity = new Point(0, 0);
         
-            Body body = new Body(position, size, velocity);
-            Image image = new Image(Constants.BALL_IMAGE);
-            Ball ball = new Ball(body, image, false);
+        //     Body body = new Body(position, size, velocity);
+        //     Image image = new Image(Constants.BALL_IMAGE);
+        //     Ball ball = new Ball(body, image, false);
         
-            cast.AddActor(Constants.BALL_GROUP, ball);
-        }
+        //     cast.AddActor(Constants.BALL_GROUP, ball);
+        // }
 
         private void AddBackground(Cast cast)
         {
@@ -232,18 +235,18 @@ namespace Unit06.Game.Directing
             cast.AddActor(Constants.LEVEL_GROUP, label);
         }
 
-        private void AddLives(Cast cast)
-        {
-            cast.ClearActors(Constants.LIVES_GROUP);
+        // private void AddLives(Cast cast)
+        // {
+        //     cast.ClearActors(Constants.LIVES_GROUP);
 
-            Text text = new Text(Constants.LIVES_FORMAT, Constants.FONT_FILE, Constants.FONT_SIZE, 
-                Constants.ALIGN_RIGHT, Constants.WHITE);
-            Point position = new Point(Constants.SCREEN_WIDTH - Constants.HUD_MARGIN, 
-                Constants.HUD_MARGIN);
+        //     Text text = new Text(Constants.LIVES_FORMAT, Constants.FONT_FILE, Constants.FONT_SIZE, 
+        //         Constants.ALIGN_RIGHT, Constants.WHITE);
+        //     Point position = new Point(Constants.SCREEN_WIDTH - Constants.HUD_MARGIN, 
+        //         Constants.HUD_MARGIN);
 
-            Label label = new Label(text, position);
-            cast.AddActor(Constants.LIVES_GROUP, label);   
-        }
+        //     Label label = new Label(text, position);
+        //     cast.AddActor(Constants.LIVES_GROUP, label);   
+        // }
 
         private void AddDino(Cast cast)
         {
@@ -265,6 +268,7 @@ namespace Unit06.Game.Directing
             //     Animation jump = new Animation(Constants.DINO_IMAGES_JUMP, Constants.DINO_RATE, 0);
             //     Dino dinoj = new Dino(body, jump, false);
             // }
+
         
         
             cast.AddActor(Constants.DINO_GROUP, dino);
@@ -323,7 +327,7 @@ namespace Unit06.Game.Directing
         {
             script.AddAction(Constants.OUTPUT, new StartDrawingAction(VideoService));
             script.AddAction(Constants.OUTPUT, new DrawHudAction(VideoService));
-            script.AddAction(Constants.OUTPUT, new DrawBallAction(VideoService));
+            // script.AddAction(Constants.OUTPUT, new DrawBallAction(VideoService));
             script.AddAction(Constants.OUTPUT, new DrawBricksAction(VideoService));
             script.AddAction(Constants.OUTPUT, new DrawDinoAction(VideoService));
             script.AddAction(Constants.OUTPUT, new DrawDialogAction(VideoService));
@@ -343,10 +347,10 @@ namespace Unit06.Game.Directing
 
         private void AddUpdateActions(Script script)
         {
-            script.AddAction(Constants.UPDATE, new MoveBallAction());
+            // script.AddAction(Constants.UPDATE, new MoveBallAction());
             script.AddAction(Constants.UPDATE, new MoveDinoAction());
             script.AddAction(Constants.UPDATE, new CollideBordersAction(PhysicsService, AudioService));
-            script.AddAction(Constants.UPDATE, new CollideBrickAction(PhysicsService, AudioService));
+            // script.AddAction(Constants.UPDATE, new CollideBrickAction(PhysicsService, AudioService));
             script.AddAction(Constants.UPDATE, new CollideDinoAction(PhysicsService, AudioService));
             script.AddAction(Constants.UPDATE, new CheckOverAction());     
         }
