@@ -12,11 +12,10 @@ namespace Unit06.Game.Casting
         /// <summary>
         /// Constructs a new instance of Actor.
         /// </summary>
-        public Cactus(Body body, Animation animation, int points, bool debug) : base(debug)
+        public Cactus(Body body, Animation animation, bool debug) : base(debug)
         {
             this.body = body;
             this.animation = animation;
-            this.points = points;
         }
 
         /// <summary>

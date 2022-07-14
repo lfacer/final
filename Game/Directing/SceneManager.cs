@@ -267,12 +267,26 @@ namespace Unit06.Game.Directing
             //     Animation jump = new Animation(Constants.DINO_IMAGES_JUMP, Constants.DINO_RATE, 0);
             //     Dino dinoj = new Dino(body, jump, false);
             // }
-
-        
-        
             cast.AddActor(Constants.DINO_GROUP, dino);
         }
 
+        private void AddCactus(Cast cast)
+        {
+            cast.ClearActors(Constants.CACTUS_GROUP);
+
+            int x = Constants.CENTER_X - Constants.CACTUS_WIDTH / 2;
+            int y = Constants.SCREEN_HEIGHT - Constants.CACTUS_HEIGHT;
+
+            Point position = new Point(200, 200);
+            Point size = new Point(Constants.CACTUS_WIDTH, Constants.CACTUS_HEIGHT);
+            Point velocity = new Point(0, 0);
+
+            Body body = new Body(position, size, velocity);
+            Animation animation = new Animation(Constants.CACTUS_IMAGES, Constants.CACTUS_RATE, 0);
+            Cactus cactus = new Cactus(body, animation, false);
+
+            cast.AddActor(Constants.CACTUS_GROUP, cactus);
+        }
         private void AddScore(Cast cast)
         {
             cast.ClearActors(Constants.SCORE_GROUP);
