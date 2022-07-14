@@ -104,7 +104,7 @@ namespace Unit06
         // public static int BALL_HEIGHT = 28;
         // public static int BALL_VELOCITY = 4;
 
-        // RACKET
+        // DINO
         public static string DINO_GROUP = "dinos";
         
         public static List<string> DINO_IMAGES_RUN
@@ -140,6 +140,20 @@ namespace Unit06
         public static int DINO_HEIGHT = 256;
         public static int DINO_RATE = 6;
         public static int DINO_VELOCITY = 3;
+
+        // CACTUS
+        public static string CACTUS_GROUP = "cactuses";
+        public static List<string> CACTUS_IMAGES
+            = new List<string>() {
+                "cactus1_00.png"
+            };
+        public static int CACTUS_WIDTH = 300;
+        public static int CACTUS_HEIGHT = 405;
+        public static int CACTUS_RATE = 0;
+        public static int CACTUS_VELOCITY = 0;
+
+
+
 
         // BRICK
         public static string BRICK_GROUP = "bricks";
