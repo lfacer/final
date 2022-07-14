@@ -14,17 +14,23 @@ namespace Unit06.Game.Scripting
             Body body = dino.GetBody();
             Point position = body.GetPosition();
             Point velocity = body.GetVelocity();
+
+            Point gravity = new Point(0, 3); // constant downward pull
+            velocity = velocity.Add(gravity); // update the velocity with gravity
+            position = position.Add(velocity);
+
             int x = position.GetX();
+            int y = position.GetY();
+            
 
             position = position.Add(velocity);
-            if (x < 0)
+            if (y < 0)
             {
-                position = new Point(0, position.GetY());
+                position = new Point(x, 0);
             }
-            else if (x > Constants.SCREEN_HEIGHT - Constants.DINO_HEIGHT)
+            else if (y > Constants.SCREEN_HEIGHT - Constants.DINO_HEIGHT)
             {
-                position = new Point(Constants.SCREEN_HEIGHT - Constants.DINO_HEIGHT, 
-                position.GetY());
+                position = new Point(x, Constants.SCREEN_HEIGHT - Constants.DINO_HEIGHT);
             }
             
 

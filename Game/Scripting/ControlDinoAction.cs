@@ -15,15 +15,11 @@ namespace Unit06.Game.Scripting
 
         public void Execute(Cast cast, Script script, ActionCallback callback)
         {
+            
             Dino dino = (Dino)cast.GetFirstActor(Constants.DINO_GROUP);
             if (keyboardService.IsKeyDown(Constants.UP))
             {
                 dino.Jump();
-                
-                
-                dino.Duck();
-            
-                
             }
             else if (keyboardService.IsKeyDown(Constants.DOWN))
             {
@@ -31,7 +27,6 @@ namespace Unit06.Game.Scripting
             }
             else
             {
-                dino.Move(5);
                 dino.StopMoving();
             }
 

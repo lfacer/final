@@ -18,6 +18,8 @@ namespace Unit06.Game.Scripting
             Dino dino = (Dino)cast.GetFirstActor(Constants.DINO_GROUP);
             Body body = dino.GetBody();
 
+            dino.Move(5);
+
             if (dino.IsDebug())
             {
                 Rectangle rectangle = body.GetRectangle();
