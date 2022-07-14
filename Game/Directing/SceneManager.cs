@@ -282,8 +282,8 @@ namespace Unit06.Game.Directing
             Point velocity = new Point(0, 0);
 
             Body body = new Body(position, size, velocity);
-            Animation animation = new Animation(Constants.CACTUS_IMAGES, Constants.CACTUS_RATE, 0);
-            Cactus cactus = new Cactus(body, animation, false);
+            Image image = new Image(Constants.CACTUS_IMAGE);
+            CactusTest cactus = new CactusTest(body, image, false);
 
             cast.AddActor(Constants.CACTUS_GROUP, cactus);
         }
