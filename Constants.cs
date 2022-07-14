@@ -141,7 +141,7 @@ namespace Unit06
         public static int DINO_HEIGHT = 256;
         // 28
         public static int DINO_RATE = 6;
-        public static int DINO_VELOCITY = 5;
+        public static int DINO_VELOCITY = 3;
 
         // BRICK
         public static string BRICK_GROUP = "bricks";
