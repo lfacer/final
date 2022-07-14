@@ -137,9 +137,7 @@ namespace Unit06
             
 
         public static int DINO_WIDTH = 340;
-        // 106
         public static int DINO_HEIGHT = 256;
-        // 28
         public static int DINO_RATE = 6;
         public static int DINO_VELOCITY = 3;
 
