@@ -47,6 +47,7 @@ namespace Unit06.Game.Directing
                 ExecuteActions(Constants.INPUT);
                 ExecuteActions(Constants.UPDATE);
                 ExecuteActions(Constants.OUTPUT);
+                
             }
             ExecuteActions(Constants.UNLOAD);
             ExecuteActions(Constants.RELEASE);
