@@ -195,10 +195,10 @@ namespace Unit06.Game.Directing
                 }
             }
 
-            Point position1 = new Point(0, 0);
-            Point position2 = new Point(800, 0);
-            Point sizeb = new Point(800, 500);
-            Point velocityb = new Point(5, 0);
+            Point position1 = new Point(890, 0);
+            Point position2 = new Point(0, 0);
+            Point sizeb = new Point(900, 500);
+            Point velocityb = new Point(-2, 0);
             List<string> imagesb = Constants.BACKGROUND_IMAGES;
             Body body1 = new Body(position1, sizeb, velocityb);
             Body body2 = new Body(position2, sizeb, velocityb);
@@ -366,7 +366,7 @@ namespace Unit06.Game.Directing
             // script.AddAction(Constants.UPDATE, new CollideBrickAction(PhysicsService, AudioService));
             script.AddAction(Constants.UPDATE, new CollideDinoAction(PhysicsService, AudioService));
             script.AddAction(Constants.UPDATE, new CheckOverAction()); 
-            script.AddAction(Constants.UPDATE, new BackgroundAction());    
+            script.AddAction(Constants.UPDATE, new BackgroundAction());
         }
     }
 }

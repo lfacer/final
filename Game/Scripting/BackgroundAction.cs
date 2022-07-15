@@ -1,5 +1,6 @@
 using Unit06.Game.Casting;
 using System.Collections.Generic;
+using System;
 
 
 namespace Unit06.Game.Scripting
@@ -11,6 +12,7 @@ namespace Unit06.Game.Scripting
         public BackgroundAction()
         {
         }
+
 
 
         public void Execute(Cast cast, Script script, ActionCallback callback)
@@ -30,9 +32,9 @@ namespace Unit06.Game.Scripting
             
 
             position = position.Add(velocity);
-            if (x < -800)
+            if (x < -900)
             {
-                position = new Point(x + 1600, y);
+                position = new Point(x + 1800, y);
             }
             // else if (y > Constants.SCREEN_HEIGHT - Constants.DINO_HEIGHT)
             // {
