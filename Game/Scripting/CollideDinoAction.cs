@@ -17,14 +17,14 @@ namespace Unit06.Game.Scripting
 
         public void Execute(Cast cast, Script script, ActionCallback callback)
         {
-            // Ball ball = (Ball)cast.GetFirstActor(Constants.BALL_GROUP);
+            // CactusTest cactus = (CactusTest)cast.GetFirstActor(Constants.CACTUS_GROUP);
             // Dino dino = (Dino)cast.GetFirstActor(Constants.DINO_GROUP);
-            // Body ballBody = ball.GetBody();
-            // Body racketBody = dino.GetBody();
+            // Body cactusBody = cactus.GetBody();
+            // Body dinoBody = dino.GetBody();
 
-            // if (physicsService.HasCollided(racketBody, ballBody))
+            // if (physicsService.HasCollided(dinoBody, cactusBody))
             // {
-            //     ball.BounceY();
+            //     dino.Dead();
             //     Sound sound = new Sound(Constants.BOUNCE_SOUND);
             //     audioService.PlaySound(sound);
             // }

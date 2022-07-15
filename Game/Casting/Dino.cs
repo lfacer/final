@@ -73,5 +73,10 @@ namespace Unit06.Game.Casting
             body.SetVelocity(velocity);
         }
         
+
+        public void Dead()
+        {
+            
+        }
     }
 }

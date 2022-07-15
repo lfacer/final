@@ -143,10 +143,7 @@ namespace Unit06
 
         // CACTUS
         public static string CACTUS_GROUP = "cactuses";
-        public static List<string> CACTUS_IMAGES
-            = new List<string>() {
-                "cactus1_00.png"
-            };
+        public static string CACTUS_IMAGE = "cactus1_00.png";
         public static int CACTUS_WIDTH = 300;
         public static int CACTUS_HEIGHT = 405;
         public static int CACTUS_RATE = 0;
