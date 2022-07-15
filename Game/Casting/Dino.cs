@@ -75,8 +75,6 @@ namespace Unit06.Game.Casting
         
 
         public void Dead()
-        {
-            
-        }
+        {}
     }
 }
