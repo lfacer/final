@@ -17,6 +17,7 @@ namespace Unit06.Game.Scripting
 
         public void Execute(Cast cast, Script script, ActionCallback callback)
         {
+            // System.Console.Write("back action 20");
             List<Actor>backgrounds = cast.GetActors(Constants.BACKGROUND_GROUP);
             foreach(Actor back in backgrounds)
             {
@@ -34,7 +35,7 @@ namespace Unit06.Game.Scripting
             position = position.Add(velocity);
             if (x < -900)
             {
-                position = new Point(x + 1800, y);
+                position = new Point(x + 1795, y);
             }
             // else if (y > Constants.SCREEN_HEIGHT - Constants.DINO_HEIGHT)
             // {
