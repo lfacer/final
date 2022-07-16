@@ -219,8 +219,8 @@ namespace Unit06
                 };
 
         public static int CACTUS_RATE = 10;
-        public static int CACTUS_WIDTH = 100;
-        // public static int CACTUS_HEIGHT = 405;
+        public static int CACTUS_WIDTH = 67;
+        public static int CACTUS_HEIGHT = 236;
         public static double CACTUS_DELAY = 0.5;
         // public static int CACTUS_VELOCITY = 0;
 
