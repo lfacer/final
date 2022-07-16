@@ -57,6 +57,7 @@ namespace Unit06.Game.Directing
             AddDino(cast);
             AddDialog(cast, Constants.ENTER_TO_START);
             AddBackground(cast);
+            AddCactus(cast);
 
             script.ClearAllActions();
             AddInitActions(script);
@@ -195,7 +196,7 @@ namespace Unit06.Game.Directing
                 }
             }
 
-            Point position1 = new Point(890, 0);
+            Point position1 = new Point(900, 0);
             Point position2 = new Point(0, 0);
             Point sizeb = new Point(900, 500);
             Point velocityb = new Point(-2, 0);
@@ -209,6 +210,72 @@ namespace Unit06.Game.Directing
             cast.AddActor(Constants.BACKGROUND_GROUP, back1);
             cast.AddActor(Constants.BACKGROUND_GROUP, back2);
         }
+
+        // AddCactus
+        private void AddCactus(Cast cast)
+        {
+            cast.ClearActors(Constants.BRICK_GROUP);
+
+            Stats stats = (Stats)cast.GetFirstActor(Constants.STATS_GROUP);
+            int level = stats.GetLevel() % Constants.BASE_LEVELS;
+            string filename = string.Format(Constants.LEVEL_FILE, level);
+            List<List<string>> rows = LoadLevel(filename);
+
+            for (int r = 0; r < rows.Count; r++)
+            {
+                for (int c = 0; c < rows[r].Count; c++)
+                {
+                    int x = Constants.FIELD_LEFT + c * Constants.BRICK_WIDTH;
+                    int y = Constants.FIELD_TOP + r * Constants.BRICK_HEIGHT;
+
+                    string color = rows[r][c][0].ToString();
+                    int frames = (int)Char.GetNumericValue(rows[r][c][1]);
+                    int points = Constants.BRICK_POINTS;
+
+                    Point position = new Point(x, y);
+                    Point size = new Point(Constants.BRICK_WIDTH, Constants.BRICK_HEIGHT);
+                    Point velocity = new Point(0, 0);
+                    List<string> images = Constants.BRICK_IMAGES[color].GetRange(0, frames);
+
+                    Body body = new Body(position, size, velocity);
+                    Animation animation = new Animation(images, Constants.BRICK_RATE, 1);
+                    
+                    Brick brick = new Brick(body, animation, points, false);
+                    cast.AddActor(Constants.BRICK_GROUP, brick);
+
+                }
+            }
+
+            Point position1 = new Point(600, 120);
+            Point position2 = new Point(1800, 120);
+            Point sizeb = new Point(450, 250);
+            Point velocityb = new Point(-6, 0);
+            List<string> imagesb = Constants.CACTUS_IMAGES;
+            Body body1 = new Body(position1, sizeb, velocityb);
+            Body body2 = new Body(position2, sizeb, velocityb);
+            Animation animationb = new Animation(imagesb, Constants.CACTUS_RATE, 1);
+
+            Brick back1 = new Brick(body1, animationb, 0, false);
+            Brick back2 = new Brick(body2, animationb, 0, false);
+            cast.AddActor(Constants.CACTUS_GROUP, back1);
+            cast.AddActor(Constants.CACTUS_GROUP, back2);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void AddDialog(Cast cast, string message)
         {
@@ -270,23 +337,23 @@ namespace Unit06.Game.Directing
             cast.AddActor(Constants.DINO_GROUP, dino);
         }
 
-        private void AddCactus(Cast cast)
-        {
-            cast.ClearActors(Constants.CACTUS_GROUP);
+        // private void AddCactus(Cast cast)
+        // {
+        //     cast.ClearActors(Constants.CACTUS_GROUP);
 
-            int x = Constants.CENTER_X - Constants.CACTUS_WIDTH / 2;
-            int y = Constants.SCREEN_HEIGHT - Constants.CACTUS_HEIGHT;
+        //     int x = Constants.CENTER_X - Constants.CACTUS_WIDTH / 2;
+        //     int y = Constants.SCREEN_HEIGHT - Constants.CACTUS_HEIGHT;
 
-            Point position = new Point(200, 200);
-            Point size = new Point(Constants.CACTUS_WIDTH, Constants.CACTUS_HEIGHT);
-            Point velocity = new Point(0, 0);
+        //     Point position = new Point(200, 200);
+        //     Point size = new Point(Constants.CACTUS_WIDTH, Constants.CACTUS_HEIGHT);
+        //     Point velocity = new Point(0, 0);
 
-            Body body = new Body(position, size, velocity);
-            Image image = new Image(Constants.CACTUS_IMAGE);
-            CactusTest cactus = new CactusTest(body, image, false);
+        //     Body body = new Body(position, size, velocity);
+        //     Image image = new Image(Constants.CACTUS_IMAGE);
+        //     CactusTest cactus = new CactusTest(body, image, false);
 
-            cast.AddActor(Constants.CACTUS_GROUP, cactus);
-        }
+        //     cast.AddActor(Constants.CACTUS_GROUP, cactus);
+        // }
         private void AddScore(Cast cast)
         {
             cast.ClearActors(Constants.SCORE_GROUP);
@@ -342,6 +409,7 @@ namespace Unit06.Game.Directing
             script.AddAction(Constants.OUTPUT, new DrawHudAction(VideoService));
             // script.AddAction(Constants.OUTPUT, new DrawBallAction(VideoService));
             script.AddAction(Constants.OUTPUT, new DrawBricksAction(VideoService));
+            script.AddAction(Constants.OUTPUT, new DrawCactusAction(VideoService));
             script.AddAction(Constants.OUTPUT, new DrawDinoAction(VideoService));
             script.AddAction(Constants.OUTPUT, new DrawDialogAction(VideoService));
             script.AddAction(Constants.OUTPUT, new EndDrawingAction(VideoService));
@@ -367,6 +435,9 @@ namespace Unit06.Game.Directing
             script.AddAction(Constants.UPDATE, new CollideDinoAction(PhysicsService, AudioService));
             script.AddAction(Constants.UPDATE, new CheckOverAction()); 
             script.AddAction(Constants.UPDATE, new BackgroundAction());
+            script.AddAction(Constants.UPDATE, new CactusAction());
+            System.Console.Write(" scene manager 438 ");
+            
         }
     }
 }
