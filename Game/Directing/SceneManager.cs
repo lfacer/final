@@ -246,8 +246,8 @@ namespace Unit06.Game.Directing
                 }
             }
 
-            Point position1 = new Point(600, 120);
-            Point position2 = new Point(1800, 120);
+            Point position1 = new Point(600, 260);
+            Point position2 = new Point(1800, 260);
             Point sizeb = new Point(450, 250);
             Point velocityb = new Point(-6, 0);
             List<string> imagesb = Constants.CACTUS_IMAGES;
