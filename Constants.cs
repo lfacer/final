@@ -141,17 +141,6 @@ namespace Unit06
         public static int DINO_RATE = 6;
         public static int DINO_VELOCITY = 3;
 
-        // CACTUS
-        public static string CACTUS_GROUP = "cactuses";
-        public static string CACTUS_IMAGE = "cactus1_00.png";
-        public static int CACTUS_WIDTH = 300;
-        public static int CACTUS_HEIGHT = 405;
-        public static int CACTUS_RATE = 0;
-        public static int CACTUS_VELOCITY = 0;
-
-
-
-
         // BRICK
         public static string BRICK_GROUP = "bricks";
         
@@ -203,23 +192,37 @@ namespace Unit06
                 } }
         };
 
-        public static string BACKGROUND_GROUP = "backgrounds";
-
-        public static List<string> BACKGROUND_IMAGES = new List<string>() {
-                    "Assets/Images/background.png"
-                };
-
         public static int BRICK_WIDTH = 80;
         public static int BRICK_HEIGHT = 28;
         public static double BRICK_DELAY = 0.5;
         public static int BRICK_RATE = 4;
         public static int BRICK_POINTS = 50;
 
-        // background sizes and info
+
+        // BACKGROUND
+        public static string BACKGROUND_GROUP = "backgrounds";
+
+        public static List<string> BACKGROUND_IMAGES = new List<string>() {
+                    "Assets/Images/background.png"
+                };
+
         public static int BACKGROUND_RATE = 4;
         public static int BACKGROUND_WIDTH = 1200;
         public static int BACKGROUND_HEIGHT = 750;
         public static double BACKGROUND_DELAY = 0.5;
+
+        // CACTUS
+        public static string CACTUS_GROUP = "cactuses";
+
+        public static List<string> CACTUS_IMAGES = new List<string>() {
+                    "Assets/Images/cactus1_00.png"
+                };
+
+        public static int CACTUS_RATE = 10;
+        public static int CACTUS_WIDTH = 100;
+        // public static int CACTUS_HEIGHT = 405;
+        public static double CACTUS_DELAY = 0.5;
+        // public static int CACTUS_VELOCITY = 0;
 
 
         // DIALOG
