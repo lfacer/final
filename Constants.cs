@@ -136,8 +136,8 @@ namespace Unit06
             };
             
 
-        public static int DINO_WIDTH = 340;
-        public static int DINO_HEIGHT = 256;
+        public static int DINO_WIDTH = 30;
+        public static int DINO_HEIGHT = 128;
         public static int DINO_RATE = 6;
         public static int DINO_VELOCITY = 3;
 
@@ -192,7 +192,7 @@ namespace Unit06
                 } }
         };
 
-        public static int BRICK_WIDTH = 80;
+        public static int BRICK_WIDTH = 67;
         public static int BRICK_HEIGHT = 28;
         public static double BRICK_DELAY = 0.5;
         public static int BRICK_RATE = 4;
@@ -219,8 +219,8 @@ namespace Unit06
                 };
 
         public static int CACTUS_RATE = 10;
-        public static int CACTUS_WIDTH = 67;
-        public static int CACTUS_HEIGHT = 236;
+        public static int CACTUS_WIDTH = 60;
+        public static int CACTUS_HEIGHT = 220;
         public static double CACTUS_DELAY = 0.5;
         // public static int CACTUS_VELOCITY = 0;
 
