@@ -24,9 +24,8 @@ namespace Unit06.Game.Scripting
 
             if (physicsService.HasCollided(dinoBody, cactusBody))
             {
-                dino.Dead();
-                Sound sound = new Sound(Constants.BOUNCE_SOUND);
-                audioService.PlaySound(sound);
+                callback.OnNext(Constants.GAME_OVER);
+                // audioService.PlaySound(overSound);
             }
         }
     }
