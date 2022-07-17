@@ -22,7 +22,11 @@ namespace Unit06.Game.Scripting
             Body cactusBody = cactus.GetBody();
             Body dinoBody = dino.GetBody();
 
-            if (physicsService.HasCollided(dinoBody, cactusBody))
+            // Here is where I changed the width of the cactus and dino. The body takes in three arguments (position, size, and velocity) I kept the same position and velocity, but I changed the size. I kept the same height, and just changed the width to 10
+            Body cb1 = new Body(cactusBody.GetPosition(), new Point(10, cactusBody.GetSize().GetY()), cactusBody.GetVelocity());
+            Body db1 = new Body(dinoBody.GetPosition(), new Point(10, dinoBody.GetSize().GetY()), dinoBody.GetVelocity());
+            
+            if (physicsService.HasCollided(db1, cb1))
             {
                 callback.OnNext(Constants.GAME_OVER);
                 // audioService.PlaySound(overSound);
